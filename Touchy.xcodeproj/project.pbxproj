@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8D5877D71D83AF930012A7E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5877D61D83AF930012A7E1 /* AppDelegate.swift */; };
-		8D5877D91D83AF930012A7E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5877D81D83AF930012A7E1 /* ViewController.swift */; };
+		8D5877D91D83AF930012A7E1 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5877D81D83AF930012A7E1 /* AuthenticationVC.swift */; };
 		8D5877DC1D83AF930012A7E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5877DA1D83AF930012A7E1 /* Main.storyboard */; };
 		8D5877DE1D83AF930012A7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5877DD1D83AF930012A7E1 /* Assets.xcassets */; };
 		8D5877E11D83AF930012A7E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5877DF1D83AF930012A7E1 /* LaunchScreen.storyboard */; };
+		8D5877EC1D83B0B30012A7E1 /* RoundedOutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5877EB1D83B0B30012A7E1 /* RoundedOutlineButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D5877D31D83AF930012A7E1 /* Touchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5877D61D83AF930012A7E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D5877D81D83AF930012A7E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D5877D81D83AF930012A7E1 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		8D5877DB1D83AF930012A7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D5877DD1D83AF930012A7E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D5877E01D83AF930012A7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D5877E21D83AF930012A7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5877EB1D83B0B30012A7E1 /* RoundedOutlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		8D5877D51D83AF930012A7E1 /* Touchy */ = {
 			isa = PBXGroup;
 			children = (
+				8D5877EA1D83AFE40012A7E1 /* Controller */,
+				8D5877E91D83AFDE0012A7E1 /* View */,
+				8D5877E81D83AFD80012A7E1 /* Model */,
 				8D5877D61D83AF930012A7E1 /* AppDelegate.swift */,
-				8D5877D81D83AF930012A7E1 /* ViewController.swift */,
 				8D5877DA1D83AF930012A7E1 /* Main.storyboard */,
 				8D5877DD1D83AF930012A7E1 /* Assets.xcassets */,
 				8D5877DF1D83AF930012A7E1 /* LaunchScreen.storyboard */,
 				8D5877E21D83AF930012A7E1 /* Info.plist */,
 			);
 			path = Touchy;
+			sourceTree = "<group>";
+		};
+		8D5877E81D83AFD80012A7E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8D5877E91D83AFDE0012A7E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D5877EB1D83B0B30012A7E1 /* RoundedOutlineButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8D5877EA1D83AFE40012A7E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8D5877D81D83AF930012A7E1 /* AuthenticationVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5877D91D83AF930012A7E1 /* ViewController.swift in Sources */,
+				8D5877D91D83AF930012A7E1 /* AuthenticationVC.swift in Sources */,
+				8D5877EC1D83B0B30012A7E1 /* RoundedOutlineButton.swift in Sources */,
 				8D5877D71D83AF930012A7E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

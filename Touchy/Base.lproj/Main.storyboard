@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xX8-gJ-fge">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AuthenticationVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AuthenticationVC" customModule="Touchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touchID" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-WF-f22">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hzE-UB-hTh"/>
+                                    <constraint firstAttribute="height" constant="100" id="mCH-uJ-IeY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-cV-P9a" customClass="RoundedOutlineButton" customModule="Touchy" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LWW-bR-1Nn"/>
+                                    <constraint firstAttribute="width" constant="128" id="SQS-rG-NAs"/>
+                                </constraints>
+                                <state key="normal" title="Tap to ID">
+                                    <color key="titleColor" red="0.81702983379364014" green="0.11186064034700394" blue="0.10406830161809921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.81702983379364014" green="0.11186064034700394" blue="0.10406830161809921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dGZ-cV-P9a" firstAttribute="top" secondItem="G4n-WF-f22" secondAttribute="bottom" constant="8" id="24S-1O-CP3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dGZ-cV-P9a" secondAttribute="trailing" constant="108" id="3ic-NI-Fl4"/>
+                            <constraint firstItem="G4n-WF-f22" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="9E9-Lx-fBI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dGZ-cV-P9a" secondAttribute="bottom" constant="279" id="FRz-hZ-XXs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4n-WF-f22" secondAttribute="bottom" constant="317" id="KiL-E4-DIQ"/>
+                            <constraint firstItem="dGZ-cV-P9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="107" id="UYX-cr-7bQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G4n-WF-f22" secondAttribute="trailing" constant="122" id="d9W-PW-WyQ"/>
+                            <constraint firstItem="G4n-WF-f22" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="186" id="jtO-Jg-O4a"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="24Y-AG-6fW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fHP-Mo-PzR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xX8-gJ-fge" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XO7-z1-jv9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CWa-KG-lHa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTp-H1-PzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="touchID" width="163" height="158"/>
+    </resources>
 </document>
